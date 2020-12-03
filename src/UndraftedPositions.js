@@ -54,7 +54,7 @@ function UndraftedPositions(props) {
         />
       </div>
 
-      <div className='col-sm-4git remote rm origin'>
+      <div className='col-sm-4'>
         <span className="col-sm-12 position-title">Shooting Guard</span>
         <Undrafted
           fields={fields}
