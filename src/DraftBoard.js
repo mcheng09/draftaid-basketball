@@ -3,15 +3,16 @@ import React, { Component } from 'react';
 import UndraftedAll from './UndraftedAll'
 import UndraftedPositions from './UndraftedPositions'
 import Drafted from './Drafted'
+import output from './output.json'
 
 class DraftBoard extends Component {
     constructor() {
       super();
 
       this.state = {
-          players: [],
-          filteredPlayers: [],
-          isLoading: true,
+          players: output.rankings,
+          filteredPlayers: output.rankings,
+          isLoading: false,
           currentDraft: 0,
           fetchError: null,
           format: 'standard',
@@ -20,7 +21,7 @@ class DraftBoard extends Component {
     }
 
     componentDidMount() {
-      this.fetchPlayers(this.state.format);
+      // this.fetchPlayers(this.state.format);
     }
 
     fetchPlayers(format) {
@@ -102,7 +103,8 @@ class DraftBoard extends Component {
           players: players,
       });
     }
-
+    
+    
     render() {
       if (this.state.isLoading) {
         return (<div className='row'>Loading...</div>)

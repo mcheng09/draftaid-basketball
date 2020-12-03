@@ -4,54 +4,64 @@ import Undrafted from './Undrafted'
 
 function UndraftedPositions(props) {
   const fields = ['tier', 'name', 'team'];
-
   return (
     <div className='col-md-6 col-sm-12 hidden-xs'>
       <div className='aid-title'>
         <i className='fa fa-signal'></i> Top Picks By Position
       </div>
 
-      <div className='col-sm-6'>
-        <span className="col-sm-12 position-title">Runningbacks</span>
+      <div className='col-sm-4'>
+        <span className="col-sm-12 position-title">Center</span>
         <Undrafted
           fields={fields}
           players={props.players}
           draft={(p) => props.draft(p)}
           size={15}
-          position='RB'
+          position='C'
         />
       </div>
 
-      <div className='col-sm-6'>
-        <span className="col-sm-12 position-title">Wide Receivers</span>
+      <div className='col-sm-4'>
+        <span className="col-sm-12 position-title">Power Forward</span>
         <Undrafted
           fields={fields}
           players={props.players}
           draft={(p) => props.draft(p)}
           size={15}
-          position='WR'
+          position='PF'
         />
       </div>
 
-      <div className='col-sm-6'>
-        <span className="col-sm-12 position-title">Quarterbacks</span>
+      <div className='col-sm-4'>
+        <span className="col-sm-12 position-title">Small Forward</span>
         <Undrafted
           fields={fields}
           players={props.players}
           draft={(p) => props.draft(p)}
           size={15}
-          position='QB'
+          position='SF'
         />
       </div>
 
-      <div className='col-sm-6'>
-        <span className="col-sm-12 position-title">Tightends</span>
+      <div className='col-sm-4'>
+        <span className="col-sm-12 position-title">Point Guard</span>
         <Undrafted
           fields={fields}
           players={props.players}
           draft={(p) => props.draft(p)}
           size={15}
-          position='TE'
+          position='PG'
+        />
+      </div>
+
+      <div className='col-sm-4'>
+        <span className="col-sm-12 position-title">Shooting Guard</span>
+        <Undrafted
+          fields={fields}
+          players={props.players}
+          draft={(p) => props.draft(p)}
+          size={15}
+          position='SG'
         />
       </div>
     </div>
